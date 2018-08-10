@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>i18n</title>
-    <script src="angular.min.js"></script>
-    <script src="angular-translate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.1/angular-translate.min.js"></script>
     <script src="en.js"></script>
+    <link rel="stylesheet" href="style.css">
     <script>
         var app = angular.module('myapp', ['pascalprecht.translate']);
 
@@ -40,12 +41,14 @@
     </script>
 </head>
 <body ng-app="myapp" ng-controller="Ctrl">
-        <h1 translate="TITLE"></h1>
-        <p translate="FOO"></p>
+    <div class="tile">
+        <h1 translate="TITLE"></h1> <br>
+        <p translate="FOO"></p> <br>
         <button ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN"></button>
         <button ng-click="changeLanguage('de')" translate="BUTTON_LANG_DE"></button>
-        <button ng-click="changeLanguage('fr')" translate="BUTTON_LANG_FR"></button>
+        <button ng-click="changeLanguage('fr')" translate="BUTTON_LANG_FR"></button> <br> <br>
         <p translate="MSG"></p>
+    </div>
 </body>
 </html>
 
